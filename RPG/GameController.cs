@@ -74,12 +74,12 @@ public class GameController
     private void AbrirLoja()
     {
         Loja loja = new Loja(); 
-        loja.Entrar();
+        loja.Entrar(heroi);
     }
 
     private void MostrarInventario()
     {
         Inventario inventario = new Inventario();
-        inventario.Entrar();
+        inventario.Entrar(heroi);
     }
 }
