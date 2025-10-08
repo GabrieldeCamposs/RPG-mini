@@ -73,11 +73,13 @@ public class GameController
 
     private void AbrirLoja()
     {
-        Console.WriteLine("Você entrou na loja! (Funcionalidade a implementar)");
+        Loja loja = new Loja(); 
+        loja.Entrar();
     }
 
     private void MostrarInventario()
     {
-        Console.WriteLine("Inventário vazio! (Funcionalidade a implementar)");
+        Inventario inventario = new Inventario();
+        inventario.Entrar();
     }
 }
