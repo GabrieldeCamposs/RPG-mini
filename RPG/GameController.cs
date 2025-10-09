@@ -16,11 +16,13 @@ public class GameController
 
         bool jogando = true;
         while (jogando)
-        {
+        {   
+            Console.WriteLine($"\nHerói: {heroi.nome} | Nível: {heroi.nivel} | Vida: {heroi.vida} | Ouro: {heroi.ouro}");
             Console.WriteLine("\nMenu Principal:");
             Console.WriteLine("1 - Batalha");
             Console.WriteLine("2 - Loja");
             Console.WriteLine("3 - Inventário");
+            Console.WriteLine("4 - Treinar");
             Console.WriteLine("0 - Sair");
             Console.Write("Escolha uma opção: ");
             string escolha = Console.ReadLine();
@@ -35,6 +37,9 @@ public class GameController
                     break;
                 case "3":
                     MostrarInventario();
+                    break;
+                case "4":
+                    TreinarHeroi();
                     break;
                 case "0":
                     jogando = false;
@@ -87,8 +92,8 @@ public class GameController
             else if (escolha == "3")
             {
                 Console.WriteLine("Você fugiu da batalha!");
-                inimigo = null; // remove referência ao inimigo gerado
-                heroi.vida = 100 + 10 * heroi.nivel; // reseta a vida do herói
+                inimigo = null;
+                heroi.vida = 100 + 10 * heroi.nivel;
                 Console.WriteLine($"Sua vida foi restaurada para {heroi.vida}!");
                 break;
             }
@@ -104,7 +109,6 @@ public class GameController
                 heroi.ouro += ouroGanho;
                 Console.WriteLine($"Você ganhou {ouroGanho} de ouro!");
 
-                // Só ganha nível se derrotar o inimigo de maior nível possível
                 if (nivelEscolhido == nivelInimigo)
                 {
                     heroi.nivel += 1;
@@ -113,13 +117,11 @@ public class GameController
                     Console.WriteLine("O nível máximo dos inimigos aumentou!");
                 }
 
-                // Resetar vida do herói após vitória
                 heroi.vida = 100 + 10 * heroi.nivel;
                 Console.WriteLine($"Sua vida foi restaurada para {heroi.vida}!");
                 break;
             }
 
-            // Turno do inimigo
             inimigo.atacar(heroi);
             Console.WriteLine($"O inimigo atacou! Sua vida: {heroi.vida}");
 
@@ -139,5 +141,35 @@ public class GameController
     private void MostrarInventario()
     {
         inventario.Entrar(heroi);
+    }
+
+    private void TreinarHeroi()
+    {
+        int custo = 10 + heroi.nivel;
+        Console.WriteLine($"\n=== TREINAMENTO ===");
+        Console.WriteLine($"Treinar custa {custo} de ouro.");
+        Console.Write("Deseja treinar seu herói? (s/n): ");
+        string resposta = Console.ReadLine().ToLower();
+
+        if (resposta == "s")
+        {
+            if (heroi.ouro >= custo)
+            {
+                heroi.ouro -= custo;
+                heroi.nivel += 1;
+                heroi.vida = 100 + 10 * heroi.nivel;
+                Console.WriteLine($"Seu herói treinou intensamente e subiu para o nível {heroi.nivel}!");
+                Console.WriteLine($"Ouro restante: {heroi.ouro}");
+                Console.WriteLine($"Nova vida máxima: {heroi.vida}");
+            }
+            else
+            {
+                Console.WriteLine("Ouro insuficiente para treinar!");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Você desistiu do treinamento.");
+        }
     }
 }
