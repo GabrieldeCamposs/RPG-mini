@@ -8,7 +8,7 @@ public class Loja
 
         while (comprando)
         {
-            Console.WriteLine("\n Bem-vindo à Loja!");
+            Console.WriteLine("\n=== LOJA ===");
             Console.WriteLine($"Ouro atual: {heroi.ouro}");
             Console.WriteLine("Escolha o que deseja comprar:");
             Console.WriteLine("1 - Poção de Vida (20 de ouro)");

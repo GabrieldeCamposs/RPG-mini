@@ -138,6 +138,6 @@ public class GameController
 
     private void MostrarInventario()
     {
-        inventario.Entrar();
+        inventario.Entrar(heroi);
     }
 }
