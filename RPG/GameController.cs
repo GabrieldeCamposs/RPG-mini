@@ -88,7 +88,14 @@ public class GameController
             {
                 Console.WriteLine("Você fugiu da batalha!");
                 inimigo = null; // remove referência ao inimigo gerado
-                heroi.vida = 100 + 10 * heroi.nivel; // reseta a vida do herói
+                if (heroi.armadura == "Armadura de Couro")
+                {
+                    heroi.vida = 100 + 50 + 10 * heroi.nivel; // reseta a vida do herói com armadura
+                }
+                else
+                {
+                    heroi.vida = 100 + 10 * heroi.nivel; // reseta a vida do herói sem armadura
+                }
                 Console.WriteLine($"Sua vida foi restaurada para {heroi.vida}!");
                 break;
             }
@@ -114,7 +121,14 @@ public class GameController
                 }
 
                 // Resetar vida do herói após vitória
-                heroi.vida = 100 + 10 * heroi.nivel;
+                if (heroi.armadura == "Armadura de Couro")
+                {
+                    heroi.vida = 100 + 50 + 10 * heroi.nivel; // reseta a vida do herói com armadura
+                }
+                else
+                {
+                    heroi.vida = 100 + 10 * heroi.nivel; // reseta a vida do herói sem armadura
+                }
                 Console.WriteLine($"Sua vida foi restaurada para {heroi.vida}!");
                 break;
             }

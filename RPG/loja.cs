@@ -24,10 +24,10 @@ public class Loja
                     ComprarItem(heroi, "Poção de Vida", 20);
                     break;
                 case "2":
-                    ComprarItem(heroi, "Espada de Ferro", 50);
+                    ComprarEspadaDeFerro(heroi);
                     break;
                 case "3":
-                    ComprarItem(heroi, "Armadura de Couro", 40);
+                    ComprarArmaduraDeCouro(heroi);
                     break;
                 case "0":
                     Console.WriteLine("Saindo da loja...");
@@ -45,12 +45,60 @@ public class Loja
         if (heroi.ouro >= preco)
         {
             heroi.ouro -= preco;
-            heroi.inventario.Add(item);
+            heroi.AdicionarItem(item);
             Console.WriteLine($"Você comprou: {item} por {preco} de ouro!");
         }
         else
         {
             Console.WriteLine("Ouro insuficiente!");
         }
+    }
+
+    private void ComprarEspadaDeFerro(Heroi heroi)
+    {
+        string item = "Espada de Ferro";
+        int preco = 50;
+
+        if (heroi.PossuiItem(item))
+        {
+            Console.WriteLine("Você já possui uma Espada de Ferro!");
+            return;
+        }
+
+        if (heroi.ouro < preco)
+        {
+            Console.WriteLine("Ouro insuficiente!");
+            return;
+        }
+
+        heroi.ouro -= preco;
+        heroi.AdicionarItem(item);
+        heroi.dano += 10;
+        heroi.espada = item;
+        Console.WriteLine($"Você comprou uma {item}! Seu dano aumentou em 50!");
+    }
+
+    private void ComprarArmaduraDeCouro(Heroi heroi)
+    {
+        string item = "Armadura de Couro";
+        int preco = 40;
+
+        if (heroi.PossuiItem(item))
+        {
+            Console.WriteLine("Você já possui uma Armadura de Couro!");
+            return;
+        }
+
+        if (heroi.ouro < preco)
+        {
+            Console.WriteLine("Ouro insuficiente!");
+            return;
+        }
+
+        heroi.ouro -= preco;
+        heroi.AdicionarItem(item);
+        heroi.vida += 50;
+        heroi.armadura = item;
+        Console.WriteLine($"Você comprou uma {item}! Sua vida aumentou em 50!");
     }
 }

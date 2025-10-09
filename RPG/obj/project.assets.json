@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aluno\\Desktop\\Nova pasta\\RPG-mini\\RPG\\RPG.csproj",
+      "projectUniqueName": "c:\\Users\\aluno\\Desktop\\messias\\RPG-mini\\RPG\\RPG.csproj",
       "projectName": "RPG",
-      "projectPath": "C:\\Users\\aluno\\Desktop\\Nova pasta\\RPG-mini\\RPG\\RPG.csproj",
+      "projectPath": "c:\\Users\\aluno\\Desktop\\messias\\RPG-mini\\RPG\\RPG.csproj",
       "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aluno\\Desktop\\Nova pasta\\RPG-mini\\RPG\\obj\\",
+      "outputPath": "c:\\Users\\aluno\\Desktop\\messias\\RPG-mini\\RPG\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
