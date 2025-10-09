@@ -1,6 +1,8 @@
 public class Heroi : Personagem{
     public string nome;
     public int nivel;
+    public int ouro = 0;
+    public List<string> inventario = new List<string>();
 
     public Heroi(string nome, int nivel, float vida, float dano){
         this.nome = nome;
