@@ -54,6 +54,7 @@ public class GameController
 
     private void IniciarBatalha()
     {
+        ItemService itemService = new ItemService();
         Console.WriteLine("Você entrou em uma batalha!");
         Console.WriteLine($"Escolha o nível do inimigo (1 até {nivelInimigo}):");
         int nivelEscolhido = 1;
@@ -75,7 +76,7 @@ public class GameController
             Console.WriteLine($"\nSua vida: {heroi.vida} | Vida do inimigo: {inimigo.vida}");
             Console.WriteLine("Seu turno! Escolha uma ação:");
             Console.WriteLine("1 - Atacar");
-            Console.WriteLine("2 - Usar item (não implementado)");
+            Console.WriteLine("2 - Usar item");
             Console.WriteLine("3 - Fugir");
             Console.Write("Opção: ");
             string escolha = Console.ReadLine();
@@ -87,7 +88,7 @@ public class GameController
             }
             else if (escolha == "2")
             {
-                Console.WriteLine("Usar item ainda não está implementado.");
+                itemService.UsarItem(heroi);
             }
             else if (escolha == "3")
             {
@@ -111,45 +112,46 @@ public class GameController
                 Console.WriteLine("Opção inválida! Você perdeu o turno.");
             }
 
-            if (inimigo.vida <= 0)
-            {
-                Console.WriteLine("Você venceu a batalha!");
-                int ouroGanho = 20 * nivelEscolhido;
-                heroi.ouro += ouroGanho;
-                Console.WriteLine($"Você ganhou {ouroGanho} de ouro!");
-
-                if (nivelEscolhido == nivelInimigo)
+                if (inimigo.vida <= 0)
                 {
-                    heroi.nivel += 1;
-                    nivelInimigo += 1;
-                    Console.WriteLine($"Você subiu para o nível {heroi.nivel}!");
-                    Console.WriteLine("O nível máximo dos inimigos aumentou!");
+                    Console.WriteLine("Você venceu a batalha!");
+                    int ouroGanho = 20 * nivelEscolhido;
+                    heroi.ouro += ouroGanho;
+                    Console.WriteLine($"Você ganhou {ouroGanho} de ouro!");
+
+                    if (nivelEscolhido == nivelInimigo)
+                    {
+                        heroi.nivel += 1;
+                        nivelInimigo += 1;
+                        Console.WriteLine($"Você subiu para o nível {heroi.nivel}!");
+                        Console.WriteLine("O nível máximo dos inimigos aumentou!");
+                    }
+
+                    // Resetar vida do herói após vitória
+                    if (heroi.armadura == "Armadura de Couro")
+                    {
+                        heroi.vida = 100 + 50 + 10 * heroi.nivel; // reseta a vida do herói com armadura
+                    }
+                    else
+                    {
+                        heroi.vida = 100 + 10 * heroi.nivel; // reseta a vida do herói sem armadura
+                    }
+
+                    Console.WriteLine($"Sua vida foi restaurada para {heroi.vida}!");
+                    break;
                 }
 
-                // Resetar vida do herói após vitória
-                if (heroi.armadura == "Armadura de Couro")
+                inimigo.atacar(heroi);
+                Console.WriteLine($"O inimigo atacou! Sua vida: {heroi.vida}");
+
+                if (heroi.vida <= 0)
                 {
-                    heroi.vida = 100 + 50 + 10 * heroi.nivel; // reseta a vida do herói com armadura
+                    Console.WriteLine("Você foi derrotado!");
+                    break;
                 }
-                else
-                {
-                    heroi.vida = 100 + 10 * heroi.nivel; // reseta a vida do herói sem armadura
-                }
-
-                Console.WriteLine($"Sua vida foi restaurada para {heroi.vida}!");
-                break;
-            }
-
-            inimigo.atacar(heroi);
-            Console.WriteLine($"O inimigo atacou! Sua vida: {heroi.vida}");
-
-            if (heroi.vida <= 0)
-            {
-                Console.WriteLine("Você foi derrotado!");
-                break;
             }
         }
-    }
+    
 
     private void AbrirLoja()
     {
@@ -160,7 +162,6 @@ public class GameController
     {
         inventario.Entrar(heroi);
     }
-
     private void TreinarHeroi()
     {
         int custo = 10 + heroi.nivel;

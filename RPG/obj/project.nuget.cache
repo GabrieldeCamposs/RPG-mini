@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "/hrhAiAgwmM=",
   "success": true,
   "projectFilePath": "C:\\Users\\tiavo\\Desktop\\Nova pasta (2)\\RPG-mini\\RPG\\RPG.csproj",
@@ -8,6 +9,16 @@
     "C:\\Users\\tiavo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.17\\microsoft.windowsdesktop.app.ref.8.0.17.nupkg.sha512",
     "C:\\Users\\tiavo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.17\\microsoft.aspnetcore.app.ref.8.0.17.nupkg.sha512",
     "C:\\Users\\tiavo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.17\\microsoft.netcore.app.host.win-x64.8.0.17.nupkg.sha512"
+=======
+  "dgSpecHash": "VToLNCnXznY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gabriel\\Desktop\\minirpg\\RPG-mini\\RPG\\RPG.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.20\\microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.20\\microsoft.windowsdesktop.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.20\\microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.20\\microsoft.netcore.app.host.win-x64.8.0.20.nupkg.sha512"
+>>>>>>> 6a175500de43d025311ea8bcaad92c917b423d22
   ],
   "logs": []
 }
