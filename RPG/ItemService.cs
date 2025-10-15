@@ -43,9 +43,10 @@ public class ItemService
                 Console.WriteLine($"Você recuperou {cura} de vida! Vida atual: {heroi.vida}");
                 break;
 
-            case "Poção de Força":
-                heroi.dano += 5;
-                Console.WriteLine("Seu dano aumentou em +5!");
+            case "Poção de Vida Superior":
+                float curaSuperior = 70;
+                heroi.vida += curaSuperior;
+                Console.WriteLine($"Você recuperou {curaSuperior} de vida! Vida atual: {heroi.vida}");
                 break;
 
             default:

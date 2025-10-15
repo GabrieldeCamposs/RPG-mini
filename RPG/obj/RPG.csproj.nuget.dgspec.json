@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\tiavo\\Desktop\\Nova pasta (2)\\RPG-mini\\RPG\\RPG.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tiavo\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-    "C:\\Users\\Gabriel\\Desktop\\minirpg\\RPG-mini\\RPG\\RPG.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Gabriel\\Desktop\\minirpg\\RPG-mini\\RPG\\RPG.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\minirpg\\RPG-mini\\RPG\\RPG.csproj",
-        "projectName": "RPG",
-        "projectPath": "C:\\Users\\Gabriel\\Desktop\\minirpg\\RPG-mini\\RPG\\RPG.csproj",
-        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel\\Desktop\\minirpg\\RPG-mini\\RPG\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> 6a175500de43d025311ea8bcaad92c917b423d22
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -74,7 +57,6 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-<<<<<<< HEAD
               "version": "[8.0.17, 8.0.17]"
             },
             {
@@ -88,21 +70,6 @@
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[8.0.17, 8.0.17]"
-=======
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
->>>>>>> 6a175500de43d025311ea8bcaad92c917b423d22
             }
           ],
           "frameworkReferences": {
@@ -110,11 +77,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
->>>>>>> 6a175500de43d025311ea8bcaad92c917b423d22
         }
       }
     }
