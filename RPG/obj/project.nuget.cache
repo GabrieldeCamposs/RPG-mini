@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "iXTm4UQ3Y1/tEEI1/vjN8qzsoPtV+56UK7EUxw2uGa//8WBDM9G0d2mPPzHDY0J5/JtXW3QmtYiiuQ0QXA9vtw==",
+  "dgSpecHash": "/hrhAiAgwmM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aluno\\Desktop\\Nova pasta\\RPG-mini\\RPG\\RPG.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\tiavo\\Desktop\\Nova pasta (2)\\RPG-mini\\RPG\\RPG.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tiavo\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.17\\microsoft.netcore.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\tiavo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.17\\microsoft.windowsdesktop.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\tiavo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.17\\microsoft.aspnetcore.app.ref.8.0.17.nupkg.sha512",
+    "C:\\Users\\tiavo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.17\\microsoft.netcore.app.host.win-x64.8.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

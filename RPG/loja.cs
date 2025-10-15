@@ -14,6 +14,7 @@ public class Loja
             Console.WriteLine("1 - Poção de Vida (20 de ouro)");
             Console.WriteLine("2 - Espada de Ferro (50 de ouro)");
             Console.WriteLine("3 - Armadura de Couro (40 de ouro)");
+            Console.WriteLine("4 - Poção de Vida Superior (40 de ouro)");
             Console.WriteLine("0 - Sair da loja");
             Console.Write("Opção: ");
             string escolha = Console.ReadLine();
@@ -28,6 +29,9 @@ public class Loja
                     break;
                 case "3":
                     ComprarArmaduraDeCouro(heroi);
+                    break;
+                case "4":
+                    ComprarItem(heroi, "Poção de Vida Superior", 40);
                     break;
                 case "0":
                     Console.WriteLine("Saindo da loja...");
@@ -75,7 +79,7 @@ public class Loja
         heroi.AdicionarItem(item);
         heroi.dano += 10;
         heroi.espada = item;
-        Console.WriteLine($"Você comprou uma {item}! Seu dano aumentou em 50!");
+        Console.WriteLine($"Você comprou uma {item}! Seu dano aumentou em 10!");
     }
 
     private void ComprarArmaduraDeCouro(Heroi heroi)
